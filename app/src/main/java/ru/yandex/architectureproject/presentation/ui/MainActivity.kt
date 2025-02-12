@@ -114,7 +114,10 @@ class MainActivity : ComponentActivity() {
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            task.text,
+                            modifier = Modifier
+                                .weight(1f)
+                                .padding(end = 8.dp),
+                            text = task.text,
                             style = if (task.isDone) TextStyle(textDecoration = TextDecoration.LineThrough) else TextStyle()
                         )
                         Row {
